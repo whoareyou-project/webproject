@@ -50,7 +50,7 @@ public class service {
 		public static MemberDTO getMember(String id) throws SQLException, NotExistException{
 			MemberDTO Member = MemberDAO.getMember(id);
 			if(Member == null){
-				throw new NotExistException("검색하는 재능 기부자가 미 존재합니다.");
+				throw new NotExistException("검색하는 회원이 미 존재합니다.");
 			}
 			return Member;
 		}

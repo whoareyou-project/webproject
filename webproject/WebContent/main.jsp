@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>Who Are You</h3>
-
+${requestScope.message}
+		<h3>Who Are You</h3>
+		메인페이지
+<button type="button" onclick="location='joinForm.jsp' ">가치관검사</button>
+<button type="button" onclick="location='attachment2.jsp' ">애착유형검사</button>
+<button type="button" onclick="location='joinForm.jsp' ">이상형월드컵</button>
+<button type="button" onclick="location='joinForm.jsp' ">나의유형검사</button>
 </body>
 </html>

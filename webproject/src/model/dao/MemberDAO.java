@@ -11,6 +11,14 @@ import model.util.DBUtil;
 
 public class MemberDAO {
 	
+		private MemberDAO() {}
+		
+		private static MemberDAO instance = new MemberDAO();
+		
+		static public MemberDAO getInstance() {
+			return instance;
+		}
+	
 		public static boolean addMember(MemberDTO member) throws SQLException{
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -124,51 +132,40 @@ public class MemberDAO {
 		
 		// 로그인시 아이디, 비밀번호 체크 메서드
 	    // 아이디, 비밀번호를 인자로 받는다.
-	    public int loginCheck(String id, String pw) 
-	    {
+	    public int loginCheck(String id, String pw){
+	    	int result = -1;
+	    	String sql = "select pw from member where id=?";
 	        Connection conn = null;
 	        PreparedStatement pstmt = null;
-	        ResultSet rs = null;
-	 
-	        String dbPW = ""; // db에서 꺼낸 비밀번호를 담을 변수
-	        int x = -1;
-	 
+	        ResultSet rset = null;
 	        try {
-	            // 쿼리 - 먼저 입력된 아이디로 DB에서 비밀번호를 조회한다.
-	            StringBuffer query = new StringBuffer();
-	            query.append("SELECT PW FROM MEMBER WHERE ID=?");
-	 
-	            conn = DBUtil.getConnection();
-	            pstmt = conn.prepareStatement(query.toString());
-	            pstmt.setString(1, id);
-	            rs = pstmt.executeQuery();
-	 
-	            if (rs.next()) // 입려된 아이디에 해당하는 비번 있을경우
-	            {
-	                dbPW = rs.getString("pw"); // 비번을 변수에 넣는다.
-	 
-	                if (dbPW.equals(pw)) 
-	                    x = 1; // 넘겨받은 비번과 꺼내온 배번 비교. 같으면 인증성공
-	                else                  
-	                    x = 0; // DB의 비밀번호와 입력받은 비밀번호 다름, 인증실패
-	                
-	            } else {
-	                x = -1; // 해당 아이디가 없을 경우
-	            }
-	 
-	            return x;
-	 
-	        } catch (Exception sqle) {
-	            throw new RuntimeException(sqle.getMessage());
-	        } finally {
-	            try{
-	                if ( pstmt != null ){ pstmt.close(); pstmt=null; }
-	                if ( conn != null ){ conn.close(); conn=null;    }
-	            }catch(Exception e){
-	                throw new RuntimeException(e.getMessage());
-	            }
+	        	conn = DBUtil.getConnection();
+	        	pstmt = conn.prepareStatement(sql);
+	        	pstmt.setString(1, id);
+	        	
+	        	rset = pstmt.executeQuery();
+	        	if(rset.next()) {
+	        		if(rset.getString("pw") != null && rset.getString("pw").equals(pw)) {
+	        			result = 1;
+	        		}else {
+	        			result = 0;
+	        		}
+	        	}else {
+	        		result = -1;
+	        	}
+	        }catch(Exception e) {
+	        	
+	        }finally {
+	        	try {
+	        		if(rset != null) rset.close();
+	        		if(pstmt != null) pstmt.close();
+	        		if(conn != null) conn.close();
+	        	}catch(Exception e) {
+	        		e.printStackTrace();
+	        	}
 	        }
-	    } // end loginCheck()
-
+	        return result;
+	       
+	    } 
 
 }
