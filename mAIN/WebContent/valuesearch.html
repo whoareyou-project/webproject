@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<br>
+
+<script> 
+    function submit_check(theform) { 
+      for(var i=0;i < theform.elements.length; i++) { 
+        if(theform.elements[i].type.toLowerCase() == 'radio') { 
+          if(theform.elements[i].checked == false) { 
+            alert(i+'번 문항이 선택되지 않았습니다.'+theform.elements[i].name); 
+            return false; 
+          } 
+        } 
+      } 
+      return true; 
+    } 
+  </script> 
+  <button type="submit">제출</button>
+<pre>
+<tr> <font size="4em">1. 한 분야에서 남 다른 전문성을 키워 그것을 바탕으로 남에게 조언해 줄 수 있기를 꿈꾼다   </font>   <br>
+	<td><input class="valuesearch" type="radio" name="s1" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s1" value="2"/>그렇다</td> 
+	<td><input class="valuesearch" type="radio" name="s1" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s1" value="4"/>대체로 그렇다</td> 
+	<td><input class="valuesearch" type="radio" name="s1" value="5"/>매우 그렇다</td> 
+	 </tr>
+<br>
+<!-- &nbsp; - 스페이스
+&ensp; - 스페이스
+&emsp; - 큰스페이스 -->
+<tr><font size="4em"> 2. 나는 다른 사람들을 통솔하는 리더로서 일할 수 있을 때 성취감을 느낀다 </font>      <br>	
+	<td><input class="valuesearch" type="radio" name="s2" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s2" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s2" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s2" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s2" value="5"/>매우 그렇다</td>
+	</tr>
+	
+<br>	
+<tr> <font size="4em">3. 나는 내 방식과 스케줄에 따라 일할 수 있는 충분한 재량권이 있는 일이 좋다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s3" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s3" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s3" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s3" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s3" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">4. 현 상태의 안정성이 독립성과 자율성 보다 더 중요하다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s4" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s4" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s4" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s4" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s4" value="5"/>매우 그렇다</td>
+	</tr>
+<br>	
+<tr> <font size="4em">5. 나는 언제나 내 사업을 시작 할 수 있는 아이디어 구상을 한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s5" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s5" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s5" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s5" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s5" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">6. 나는 사회에 실질적인 기여를 했다고 느낄 수 있을 때, 내 일에서 성공했다고 느낀다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s6" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s6" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s6" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s6" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s6" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">7. 나는 매우 도전적인 상황에서 해결책을 제시하거나 문제를 해결 할 수 있는 것이 좋다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s7" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s7" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s7" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s7" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s7" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">8. 나는 개인적인 일이나 가족과 관련된 일에 지장을 초래하는 업무를 맡게 되면 차라리 직장을 옮기는 것을 택하겠다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s8" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s8" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s8" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s8" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s8" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">9. 나는 기술적, 기능적인 능력을 최고의 수준으로 올려놓아야만 성공했다고 느낄 것이다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s9" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s9" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s9" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s9" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s9" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">10. 나는 거대한 조직의 책임자가 되어 많은 사람들에게 영향력을 행사하는 결정을 내리는 것을 꿈꾼다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s10" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s10" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s10" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s10" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s10" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">11. 나는 어떤 일을 함에 있어 탄력적(자율적)으로 정할 수 있을 때 만족감을 느낀다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s11" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s11" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s11" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s11" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s11" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">12. 기존의 방식을 부인하는 새로운 일을 받아들이는 것은 피하고 싶다</font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s12" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s12" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s12" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s12" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s12" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">13. 다른 사람의 회사에서 최고 경영자의 위치에 오르기 보다는 내 자신의 사업을 키워 나가는 것이 더욱 중요하다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s13" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s13" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s13" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s13" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s13" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">14. 나는 나의 재능을 다른 사람을 위해 사용할 때, 성취감을 만끽한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s14" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s14" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s14" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s14" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s14" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">15. 나는 대단히 어려운 도전에 직면하여 그것을 극복 할 때, 성취감을 맛 볼 수 있다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s15" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s15" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s15" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s15" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s15" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">16. 나는 개인, 가족 그리고 업무를 조화롭게 수행할 수 있는 것이 중요하다</font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s16" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s16" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s16" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s16" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s16" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">17. 한 특정 분야의 전문가가 되는 것이 일반 관리자가 되는 것 보다 더 중요하다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s17" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s17" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s17" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s17" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s17" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">18. 나는 한 조직의 리더가 될 수 있을 때, 성취감을 느낄 수 있다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s18" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s18" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s18" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s18" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s18" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">19. 나는 일을 수행함에 있어 독립성과 상당한 자율성을 보장 받을 수 있을 때, 성취감을 느낄 수 있다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s19" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s19" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s19" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s19" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s19" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">20. 나는 안정성과 안정성이 보장된 조직에서 일하는 것을 더 높이 평가한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s20" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s20" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s20" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s20" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s20" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">21. 내 자신의 아이디어와 노력의 결과로 무엇인가를 만들 수 있을 때 성취감을 만끽한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s21" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s21" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s21" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s21" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s21" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">22. 더 나은 세상을 만들기 위해 나의 기술을 활용하는 것이 관리직에 있는 것 보다 더 중요하다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s22" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s22" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s22" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s22" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s22" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">23. 나는 해결하기 힘들어 보이는 문제를 해결하고 불가능 해 보이는 것을 가능케 했을 때 성취감을 만끽한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s23" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s23" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s23" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s23" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s23" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">24. 나는 개인, 가족 그리고 일에 있어서 필요한 조직이 균형을 유지 할 수 있을 때 인생에서 성공했다고 느낀다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s24" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s24" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s24" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s24" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s24" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">25. 내 전문 분야를 단념케 하는 업무를 맡게 된다면 차라리 직장을 옮기는 쪽을 선택할 것이다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s25" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s25" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s25" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s25" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s25" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">26. 특정 분야에 정통한 전문가가 되기보다는 총괄관리자가 되는 것을 더 좋아한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s26" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s26" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s26" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s26" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s26" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">27. 나는 규칙이나 제약에 얽매이지 않고 내 방식대로 일 할 수 있는 기회를 가지는 것이 직업적 안정성 보다 더 중요하다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s27" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s27" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s27" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s27" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s27" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">28. 나는 재정적으로, 직업적으로 완벽한 안정감을 가질 때, 성취감을 느낀다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s28" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s28" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s28" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s28" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s28" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">29. 내 스스로가 제안한 아이디어나 생각으로 무엇인가를 개발하거나 만들어 냈을 때, 성취감을 느낀다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s29" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s29" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s29" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s29" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s29" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">30. 나는 인류와 사회에 실질적으로 기여할 수 있는 직업을 갖기를 꿈꾼다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s30" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s30" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s30" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s30" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s30" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">31. 나는 나의 문제해결 능력이나 경쟁력 있는 기술을 요구하는 도전적인 일을 추구한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s31" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s31" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s31" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s31" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s31" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">32. 높은 직위에 오르기보다는 개인적 삶과 직업 생활을 균형 있게 유지하는 것이 더 중요하다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s32" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s32" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s32" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s32" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s32" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">33. 나는 나의 고유한 재능과 기술을 사용할 수 있는 상황에서 성취감을 느낀다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s33" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s33" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s33" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s33" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s33" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">34. 나는 총괄관리자(최고 경영자)가 될 수 있는 경력에서 벗어나는 업무를 맡을 바에야 차라리 직장을 떠나겠다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s34" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s34" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s34" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s34" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s34" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">35. 나는 자율과 자유가 줄어드는 업무를 수행하는 것 보다는 직장을 옮기는 편이 낫다고 생각한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s35" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s35" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s35" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s35" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s35" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">36. 나는 직업 선택시 안정감과 고용 안정성이 가장 중요하다고 생각한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s36" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s36" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s36" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s36" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s36" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">37. 나는 언젠가는 내 사업체를 운영하는 것을 꿈꾼다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s37" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s37" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s37" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s37" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s37" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr> <font size="4em">38. 나는 봉사하는 삶이 중요하다고 생각한다 </font> <br>	
+	<td><input class="valuesearch" type="radio" name="s38" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s38" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s38" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s38" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s38" value="5"/>매우 그렇다</td>
+	</tr>
+	<br>
+<tr> <font size="4em">39. 관리자가 되어 지시하는 것보다  해결하기 어려운 문제와 씨름하는 것을 더 선호한다 </font> <br>	 
+	<td><input class="valuesearch" type="radio" name="s39" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s39" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s39" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s39" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s39" value="5"/>매우 그렇다</td>
+	</tr>
+<br>
+<tr><font size="4em">40. 나는 어떤 일이든 개인이나 가족 문제에 지장을 주지 않으려고 최대한 노력한다 </font> <br>
+	<td><input class="valuesearch" type="radio" name="s40" value="1"/>전혀 그렇지 않다</td>
+	<td><input class="valuesearch" type="radio" name="s40" value="2"/>그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s40" value="3"/>보통정도이다</td>
+	<td><input class="valuesearch" type="radio" name="s40" value="4"/>대체로 그렇다</td>
+	<td><input class="valuesearch" type="radio" name="s40" value="5"/>매우 그렇다</td>
+	</tr>
+
+<br>
+</pre>
+
+</body>
+</html>
