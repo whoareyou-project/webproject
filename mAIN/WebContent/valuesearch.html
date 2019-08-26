@@ -9,10 +9,10 @@
 
 <script> 
     function submit_check(theform) { 
-      for(var i=0;i < theform.elements.length; i++) { 
-        if(theform.elements[i].type.toLowerCase() == 'radio') { 
-          if(theform.elements[i].checked == false) { 
-            alert(i+'번 문항이 선택되지 않았습니다.'+theform.elements[i].name); 
+      for(var i=0;i < theform.name.length; i++) { 
+        if(theform.name[i].type.toLowerCase() == 'radio') { 
+          if(theform.name[i].checked == false) { 
+            alert(i+'번 문항이 선택되지 않았습니다.'+theform.name[i].name); 
             return false; 
           } 
         } 
@@ -21,6 +21,7 @@
     } 
   </script> 
   <button type="submit">제출</button>
+
 <pre>
 <tr> <font size="4em">1. 한 분야에서 남 다른 전문성을 키워 그것을 바탕으로 남에게 조언해 줄 수 있기를 꿈꾼다   </font>   <br>
 	<td><input class="valuesearch" type="radio" name="s1" value="1"/>전혀 그렇지 않다</td>
