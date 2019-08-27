@@ -54,23 +54,27 @@
 
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
 								<li class="active"><a href="main2.jsp">Home</a></li>
-								<li><a href="dj.html">DJs</a></li>
+								<li><a href="dj.html">Value</a></li>
 							
-
-								<li class="has-children"><a href="shows.html">Shows</a>
+								<li><a href="attachment2.jsp">Lovetype</a></li>
+								
+								<li><a href="about.html">About</a></li>
+									<li class="has-children"><a href="shows.html">Shows</a>
 									<ul class="dropdown arrow-top">
-										<li><a href="#">Top 20 of The Week</a></li>
-										<li><a href="#">Featured Artist</a></li>
+										<li><a href="#">Valuetype</a></li>
+										<li><a href="#">Lovetype</a></li>
 										<li><a href="#">Interviews</a></li>
-										<li class="has-children"><a href="#">Sub Menu</a>
+										<li class="has-children"><a href="#">Member</a>
 											<ul class="dropdown">
-												<li><a href="#">Menu One</a></li>
-												<li><a href="#">Menu Two</a></li>
-												<li><a href="#">Menu Three</a></li>
+												<li><a href="#">Valuetype</a></li>
+												<li><a href="#">Lovetype</a></li>
+												<li><a href="updatejoin.jsp">회원정보수정</a></li>
+												<li><a href="#">회원탈퇴</a></li>
+												
 											</ul></li>
 									</ul></li>
-								<li><a href="attachment2.jsp">Lovetype</a></li>
-								<li><a href="about.html">About</a></li>
+								
+								
 								<li><a href="logout">Logout</a></li>
 							</ul>
 						</nav>

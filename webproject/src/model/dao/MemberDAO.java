@@ -47,15 +47,21 @@ public class MemberDAO {
 		}
 	
 		//수정  
-		public static boolean updateMember(String id, String job) throws SQLException{
+		public static boolean updateMember(String id ,String pw ,String name ,String age ,String sex ,String birthday ,String address ,String job ,String height
+) throws SQLException{
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			try{
 				con = DBUtil.getConnection();
 				
-				pstmt = con.prepareStatement("update Member set job=? where id=?");
-				pstmt.setString(1, job);
-				pstmt.setString(2, id);
+				pstmt = con.prepareStatement("update Member se pw=?,  name=?,  age=? ,birthday=?  ,address=? , job=? , height=? where id=?");
+				pstmt.setString(1, pw);
+				pstmt.setString(2, name);
+				pstmt.setString(3, age);
+				pstmt.setString(4, birthday);
+				pstmt.setString(5, address);
+				pstmt.setString(6, job);
+				pstmt.setString(7, height);
 				
 				int result = pstmt.executeUpdate();
 				if(result == 1){
@@ -70,13 +76,22 @@ public class MemberDAO {
 	
 		//??? 삭제
 		//sql - delete from Member where Member_id=?
-		public static boolean deleteMember(String id) throws SQLException{
+		public static boolean deleteMember(String id ,String pw ,String name ,String age ,String sex ,String birthday ,String address ,String job ,String height
+) throws SQLException{
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			try{
 				con = DBUtil.getConnection();
-				pstmt = con.prepareStatement("delete from Member where id=?");
+				pstmt = con.prepareStatement("delete Member id=?, pw=?,  name=?,  age=?,  sex=?,  birthday=?,  address=?,  job=?,  height=? from Member where id=?");
 				pstmt.setString(1, id);
+				pstmt.setString(2, pw);
+				pstmt.setString(3, name);
+				pstmt.setString(4, age);
+				pstmt.setString(5, sex);
+				pstmt.setString(6, birthday);
+				pstmt.setString(7, address);
+				pstmt.setString(8, job);
+				pstmt.setString(9, height);
 				int result = pstmt.executeUpdate();
 				if(result == 1){
 					return true;

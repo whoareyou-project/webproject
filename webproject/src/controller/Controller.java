@@ -120,7 +120,7 @@ public class Controller extends HttpServlet {
 			if(result){
 				request.setAttribute("member", member);
 				request.setAttribute("successMsg", "가입 완료");
-				url = "memberDetail.jsp";
+				url = "joinsuccess.jsp";
 			}else{
 				request.setAttribute("errorMsg", "다시 시도하세요");
 			}
@@ -136,7 +136,7 @@ public class Controller extends HttpServlet {
 		String url = "showError.jsp";
 		try {
 			request.setAttribute("member", service.getMember(request.getParameter("memberId")));
-			url = "memberUpdate.jsp";
+			url = "updatejoin.jsp";
 		}catch(Exception s){
 			s.printStackTrace();
 			request.setAttribute("errorMsg", s.getMessage());
