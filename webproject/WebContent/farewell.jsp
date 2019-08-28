@@ -53,6 +53,11 @@ padding:20px 20px 20px 400px; }
 
 </head>
 <body>
+	
+	<form action="control" class="contact-form" method="post">
+  		<input type="hidden" name="command" value="memberDelete"> 
+  		<input type="hidden" name="id" value="${sessionScope.id}"> 
+	
 	<div class="site-wrap">
 
 		<div class="site-navbar mt-4">
@@ -60,8 +65,7 @@ padding:20px 20px 20px 400px; }
 				<div class="row align-items-center">
 					<div class="col-8 col-md-8 col-lg-4">
 						<h1 class="mb-0">
-							<a href="index2.html" class="text-white h2 mb-0"><strong>WHO
-									ARE YOU<span class="text-primary">.</span>
+							<a href="main2.jsp" class="text-white h2 mb-0"><strong>WHO ARE YOU<span class="text-primary">.</span>
 							</strong></a>
 						</h1>
 					</div>
@@ -99,7 +103,7 @@ padding:20px 20px 20px 400px; }
 				<div class="col-md-7 text-center" data-aos="fade-up"
 					data-aos-delay="400">
 
-					<h1 class="text-white">WELCOME!</h1>
+					<h1 class="text-white">SHOCK!</h1>
 					<p id="usingVar">
 						<span class="mx-3">&bullet;</span>
 					</p>
@@ -122,7 +126,7 @@ padding:20px 20px 20px 400px; }
 				<div class="col-md-7 text-center" data-aos="fade-up"
 					data-aos-delay="400">
 
-					<h5 class="col-lg-8 d">가입을 축하합니다!</h5>
+					<h5 class="col-lg-8 d">정말 우리를 떠나십니까?</h5>
 
 
 				</div>
@@ -133,7 +137,8 @@ padding:20px 20px 20px 400px; }
 <!-- <input type="submit" value="Login" onclick="location.href='index2.html' " class="btn btn-primary py-3 px-4">
  -->
  
- <a  class="btn btn-primary py-3 px-4" href="index2.html">Login</a>
+ <a  class="btn btn-primary py-2 px-4" href="control?command=memberDelete">YES</a>
+  <a  class="btn btn-primary py-2 px-4" href="main2.jsp">NO</a>
  </div>
  
 <%--  <div class="col-lg-8  text-center bcenter"> 
@@ -161,7 +166,7 @@ padding:20px 20px 20px 400px; }
 			</div>
 		</div>
 		</footer>
-
+</form>
 	</div>
 
 	<script src="main/js/jquery-3.3.1.min.js"></script>

@@ -15,7 +15,7 @@
 
 	<center>
 		<h3>${requestScope.errorMsg}</h3>
-			
+			nono 안됩니당~
 		<br><br><br>
 		<a href="${pageContext.request.contextPath}/index2.html">메인 화면으로 이동하기</a>
 	</center>

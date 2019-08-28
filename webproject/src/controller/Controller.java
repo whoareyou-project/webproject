@@ -2,20 +2,17 @@ package controller;
 
 import java.io.IOException;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import exception.MessageException;
-import model.dao.MemberDAO;
 import model.dao.service;
 import model.dto.AttachDTO;
 import model.dto.MemberDTO;
+import model.dto.modiDTO;
 
 @WebServlet("/control")
 public class Controller extends HttpServlet {
@@ -74,6 +71,7 @@ public class Controller extends HttpServlet {
 	//???
 	//모든 회원 검색 - 검색된 데이터 출력 화면[memberList.jsp]
 	public void memberAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
 		String url = "showError.jsp";
 		try {
 			request.setAttribute("memberAll", service.getAllMembers());
@@ -89,14 +87,17 @@ public class Controller extends HttpServlet {
 	//회원 검색 
 	public void member(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
-		try {
-			request.setAttribute("member", service.getMember(request.getParameter("memberId")));
-			url = "memberDetail.jsp";
+		try { 
+			HttpSession session = request.getSession();
+			request.setAttribute("member", service.getMember((String) session.getAttribute("id")));
+			url = "information.jsp";
+			
 		}catch(Exception s){
 			s.printStackTrace();
 			request.setAttribute("errorMsg", s.getMessage());
+			System.out.println("----123------");
 		}
-		request.getRequestDispatcher(url).forward(request, response);
+		request.getRequestDispatcher(url).forward(request, response); 
 	}
 	
 
@@ -135,7 +136,8 @@ public class Controller extends HttpServlet {
 	public void memberUpdateReq(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "showError.jsp";
 		try {
-			request.setAttribute("member", service.getMember(request.getParameter("memberId")));
+			HttpSession session = request.getSession();
+			request.setAttribute("member", service.getMember((String)session.getAttribute("id")));
 			url = "updatejoin.jsp";
 		}catch(Exception s){
 			s.printStackTrace();
@@ -146,56 +148,70 @@ public class Controller extends HttpServlet {
 
 	//회원 수정 
 	public void memberUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		String memberId = request.getParameter("memberId");		
-		String major=request.getParameter("major");				
-		if(memberId == null || memberId.trim().length() == 0 ||
-		   major == null || major.trim().length() == 0 ){
-		response.sendRedirect("memberDetail.jsp");
-		return;
+	
+		String url = "showError.jsp";
+		/*id pw name age sex birthday address job height*/
+		String id =request.getParameter("id");
+		String pw =request.getParameter("pw");
+		String name =request.getParameter("name");
+		String age =request.getParameter("age");
+		String birthday =request.getParameter("birthday");
+		String address =request.getParameter("address");
+		String job =request.getParameter("job");
+		String height =request.getParameter("height");
+		if(pw == null || pw.trim().length() == 0 ||
+		   name == null || name.trim().length() == 0 ||
+		   age == null || age.trim().length() == 0 ||
+		   birthday == null || birthday.trim().length() == 0 ||
+		   address == null || address.trim().length() == 0 ||
+		   job == null || job.trim().length() == 0 ||
+		   height == null || height.trim().length() == 0 ){
+				response.sendRedirect("showError.jsp");
+				return;
 		}
 		boolean result = false;
-	
+		modiDTO member = new modiDTO(id, pw, name, age, birthday, address, job, height);
+		
 		try {
-			result = service.updateMember(memberId, major);
-			request.setAttribute("member", service.getMember(memberId));
+			result = service.updateMember(id, pw, name, age, birthday, address, job, height);
+			System.out.println(result);
+			
+			
+			if(result) {
+				request.setAttribute("member", service.getMember(id));
+				url = "updatejoin.jsp";
+			} else {
+				request.setAttribute("errorMsg", "다시 시도하세요");
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("error", "게시글 수정 실패");
+			request.setAttribute("errorMsg", e.getMessage());
 		}
-		if(result){
-			
-			request.setAttribute("successMsg", "수정 완료");
-			request.getRequestDispatcher("memberDetail.jsp").forward(request, response);
-			return;
-		}
-		request.getRequestDispatcher("error.jsp").forward(request, response);
+		
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 	
 	//???
 	//회원 삭제
-	public void memberDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String memberId = request.getParameter("memberId");					
-		if(memberId == null || memberId.trim().length() == 0){
-		response.sendRedirect("memberDetail.jsp");
-		return;
-		}
-		boolean result = false;
-	
+		public void memberDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			String url="showError.jsp";
+			String id = request.getParameter("id");					
+		
 		try {
-			result = service.deleteMember(memberId);
-			request.setAttribute("member", service.getMember(memberId));
-		} catch (Exception e) {
+			HttpSession session = request.getSession();
+			boolean result = service.deleteMember(((String) session.getAttribute("id")));
+			if(result){
+				request.setAttribute("id", id);
+				request.setAttribute("successMsg", "삭제 완료");
+				url ="index2.html";
+			}else {
+				request.setAttribute("errorMsg", "다시시도하세요");
+			}
+			} catch (Exception e) {
 			e.printStackTrace();
-			request.setAttribute("error", "게시글 삭제 실패");
 		}
-		if(result){
-			
-			request.setAttribute("successMsg", "삭제 완료");
-			request.getRequestDispatcher("memberDetail.jsp").forward(request, response);
-			return;
-		}
-		request.getRequestDispatcher("error.jsp").forward(request, response);
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 	
 	protected void attachInsert(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

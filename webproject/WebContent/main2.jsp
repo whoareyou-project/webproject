@@ -1,6 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<meta charset="UTF-8">
 <title>WHO ARE YOU &mdash; Colorlib Website Template</title>
 <meta charset="utf-8">
 <meta name="viewport"
@@ -26,11 +28,15 @@
 
 <link rel="stylesheet" href="main/css/style.css">
 
+<style>
+.ico{
+padding:20px 0px 2px 340px;
+margin-right:100px;
+}
+</style>
+
 </head>
 <body>
-
-
-
 	<div class="site-wrap">
 
 		<div class="site-navbar mt-4">
@@ -38,8 +44,7 @@
 				<div class="row align-items-center">
 					<div class="col-8 col-md-8 col-lg-4">
 						<h1 class="mb-0">
-							<a href="index.html" class="text-white h2 mb-0"><strong>WHO
-									ARE YOU<span class="text-primary">.</span>
+							<a href="main2.jsp" class="text-white h2 mb-0"><strong>WHO ARE YOU<span class="text-primary">.</span>
 							</strong></a>
 						</h1>
 					</div>
@@ -54,27 +59,26 @@
 
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
 								<li class="active"><a href="main2.jsp">Home</a></li>
-								<li><a href="dj.html">Value</a></li>
-							
+
 								<li><a href="attachment2.jsp">Lovetype</a></li>
-								
+
 								<li><a href="about.html">About</a></li>
-									<li class="has-children"><a href="shows.html">Shows</a>
+								<li class="has-children"><a href="#">Shows</a>
 									<ul class="dropdown arrow-top">
-										<li><a href="#">Valuetype</a></li>
-										<li><a href="#">Lovetype</a></li>
-										<li><a href="#">Interviews</a></li>
+										<li><a href="attachintroduce.html">Lovetype</a></li>
+										<li><a href="#">Mytype</a></li>
 										<li class="has-children"><a href="#">Member</a>
 											<ul class="dropdown">
-												<li><a href="#">Valuetype</a></li>
-												<li><a href="#">Lovetype</a></li>
+											
+											
+												<li><a href="control?command=member">회원정보확인</a></li>
 												<li><a href="updatejoin.jsp">회원정보수정</a></li>
-												<li><a href="#">회원탈퇴</a></li>
-												
+												<li><a href="farewell.jsp">회원탈퇴</a></li>
+
 											</ul></li>
 									</ul></li>
-								
-								
+
+
 								<li><a href="logout">Logout</a></li>
 							</ul>
 						</nav>
@@ -97,13 +101,14 @@
 	<!-- .site-mobile-menu -->
 
 	<div class="site-blocks-cover overlay"
-		style="background-image: url('images/hero_bg_11.jpg');" data-aos="fade"        
-		data-stellar-background-ratio="0.5" data-aos="fade">
+		style="background-image: url('images/hero_bg_11.jpg');"
+		data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-7 text-center" data-aos="fade-up"
 					data-aos-delay="400">
-					<h1 class="mb-4">Welcome! <br>${sessionScope.id}</h1>
+					<h1 class="mb-4">
+						Welcome! <br>${sessionScope.id}</h1>
 					<p>
 						<a href="#" class="btn btn-primary px-4 py-3">The way you are</a>
 					</p>
@@ -126,23 +131,18 @@
 			<div class="row">
 
 
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
-					href="https://github.com/Leehyeonjun-HUB "
-					class="col-2 text-center py-4 social-icon d-block"><span
-					class="icon-github-square text-white"></span></a> <a
-					href="https://github.com/LEEJUNGWON1993"
-					class="col-2 text-center py-4 social-icon d-block"><span
-					class="icon-git text-white"></span></a>
-
-
+			<!-- 	<a href="https://github.com/Leehyeonjun-HUB "class="icon-github-square text-white ico"><span></span></a>
+				<a href="https://github.com/Leehyeonjun-HUB "class="col-2 text-center py-4 social-icon d-block ico"></a>
+				<span class="icon-github-square text-white">  </span> 
+				<a href="https://github.com/LEEJUNGWON1993" class="col-2 text-center py-4 social-icon d-block"></a>
+				<span class="icon-git text-white"></span>
+				 -->
+				 <a href="https://github.com/Leehyeonjun-HUB "class="icon-github text-white col-2 text-center py-4   ico"></a>
+				 
+				<a href="https://github.com/LEEJUNGWON1993" class="icon-git text-white col-2 text-center py-4  ico"></a>
+			
+				
+				
 
 			</div>
 		</div>
@@ -217,6 +217,5 @@
 	<script src="main/js/circleaudioplayer.js"></script>
 
 	<script src="main/js/main.js"></script>
-
 </body>
 </html>

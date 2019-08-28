@@ -45,14 +45,15 @@ ${requestScope.successMsg}
 
 <h3>회원</h3>
 <hr><p> 
- 
+ <form action="control" mothod="post">
+ <input type="hidden" name="command" value="memberUpdateReq">
 <table border="1">
 	<tr>
 		<th>회원 id</th><th>회원명</th><th>나이</th><th>성별</th><th>생일</th><th>주소</th><th>직업</th><th>키</th>
 	</tr>
  	<tr>
- 		<td>${requestScope.member.id}</td>
- 		<td>${requestScope.member.name}</td> 
+ 		<td><input type="text" name="id" value="${requestScope.member.name}"}></td>
+ 		<td>${member.name}</td> 
  		<td>${requestScope.member.age}</td>
  		<td>${requestScope.member.sex}</td>
  		<td>${requestScope.member.birthday}</td>
@@ -68,7 +69,7 @@ ${requestScope.successMsg}
 <a href="control?command=memberDelete&memberId=${member.id}">탈퇴하기</a>
 
 &nbsp;&nbsp;&nbsp;<a href="${pageContext.request.contextPath}/index2.html">메인 화면 이동</a>
-
+</form>
 </center>
 </body>
 </html>

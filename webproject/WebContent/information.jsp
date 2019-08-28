@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="true"%>
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +40,7 @@
             <h1 class="mb-0"><a href="main2.jsp" class="text-white h2 mb-0"><strong>WHO ARE YOU<span
                     class="text-primary">.</span></strong></a></h1>
           </div>
-          					<div class="col-4 col-md-4 col-lg-8">
+					<div class="col-4 col-md-4 col-lg-8">
 						<nav class="site-navigation text-right text-md-right"
 							role="navigation">
 
@@ -79,22 +77,17 @@
 							</ul>
 						</nav>
 					</div>
-          <div class="col-4 col-md-4 col-lg-8">
-            <nav class="site-navigation text-right text-md-right" role="navigation">
-
-              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+<!--               <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
                   class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-               
-                  
-            
-              </ul>
-            </nav>
+                <li>
+                  <a href="index2.html">Login</a>
+                </li>
+              </ul> -->
           </div>
 
 
-        </div>
       </div>
     </div>
   </div>
@@ -107,7 +100,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="400">
   
-          <h1 class="text-white"> Modification</h1>
+          <h1 class="text-white">Information</h1>
           
         </div>
       </div>
@@ -125,88 +118,62 @@
 
         <div class="col-lg-4 mb-5 mb-lg-0">
           <div class="mb-5">
-            <h3 class="footer-heading mb-4">회원 정보 수정</h3> 
+            <h3 class="footer-heading mb-4">회원 정보 확인</h3>
+              
+               </div>
+
               
               
-              
-            
        
- <form action="control" class="contact-form" method="post">
-  		<input type="hidden" name="command" value="memberUpdate"> 
-  		<input type="hidden" name="id" value="${sessionScope.id}"> 
-           
-           <div class="row form-group">
-							<div class="col-md-12">
-								<label class="font-weight-bold">ID</label> ${sessionScope.id}
-							</div>
-						</div>
-						
-            <div class="row form-group">
+<%--           <form action="control" class="contact-form" method="post">
+  		<input type="hidden" name="command" value="member">  
+  		<input type="hidden" name="id" value="${sessionScope.id}">  --%>
+  
+              <div class="row form-group">
               <div class="col-md-12">
-                <label class="font-weight-bold" for="pw">PassWord</label>
-                <input type="text" name="pw" class="form-control" value="${sessionScope.member.pw}" maxlength="50">
-              </div>
-            </div>
-       
-            
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="font-weight-bold" for="name">Name</label>
-             <input type="text" name="name" class="form-control" value="${sessionScope.member.name}" maxlength="50">
+                <label class="font-weight-bold" for="id">ID</label>
+              ${sessionScope.id}
               </div>
             </div>
 
-   <div class="row form-group">
+	        <div class="row form-group">
+              <div class="col-md-12">
+                <label class="font-weight-bold" for="name">Name</label>
+               ${member.name}
+              </div>
+            </div> <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="age">Age</label>
-                  <input type="text" name="age" class="form-control" value="${sessionScope.member.age}" maxlength="50">
-               </div>
-            </div>
-             <div class="row form-group">
+               ${member.age}
+              </div>
+            </div> <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="sex">Gender</label>
-                  <input type="text" name="sex" class="form-control" value="${sessionScope.member.sex}" maxlength="50">
-               </div>
-            </div>
-            
-              <div class="row form-group">
+               ${member.sex}
+              </div>
+            </div> <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="birthday">Birthday</label>
-                 <input type="text" name="birthday" class="form-control" value="${sessionScope.member.birthday}" maxlength="50">
-                </div>
-            </div>
-  
-  
-            <div class="row form-group">
+               ${member.birthday}
+              </div>
+            </div> <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="address">Address</label>
-                <textarea name="address" cols="20" rows="2" class="form-control"
-                  placeholder="주소를 입력하세요"></textarea>
+               ${member.address}
               </div>
-            </div>
-  
-     <div class="row form-group">
+            </div> <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="job">Job</label>
-                <input type="text" name="job" class="form-control" value="${sessionScope.member.job}" maxlength="50">
+               ${member.job}
               </div>
-            </div>
-            
-               <div class="row form-group">
+            </div> <div class="row form-group">
               <div class="col-md-12">
                 <label class="font-weight-bold" for="height">Height</label>
-                 <input type="text" name="height" class="form-control" value="${sessionScope.member.height}" maxlength="50">
-                </div>
-            </div>
-            
-  
-            <div class="row form-group">
-              <div class="col-md-12">
-                <input type="submit" value="수정" class="btn btn-primary py-3 px-4">
-            
-             &nbsp;&nbsp;&nbsp;   <input type="button" value="HOME" onclick="location.href='main2.jsp'" class="btn btn-primary py-3 px-4">
+               ${member.height}
               </div>
             </div>
+            
+           
   
           </form>
 
@@ -239,6 +206,6 @@
   <script src="main/js/aos.js"></script>
   <script src="main/js/circleaudioplayer.js"></script>
 
-  <script src="main/js/main.js"></script> 
+  <script src="main/js/main.js"></script>
 </body>
 </html>
