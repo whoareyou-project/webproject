@@ -49,7 +49,11 @@ padding:20px 0px 2px 690px;
 padding:20px 20px 20px 400px; }
 </style>
 
-
+<style type="text/css">
+.dw { 
+padding:20px 20px 20px 650px; }
+</style>
+ 
 </head>
 <body>
 	
@@ -124,19 +128,19 @@ padding:20px 20px 20px 400px; }
 				<div class="col-md-7 text-center" data-aos="fade-up"
 					data-aos-delay="400">
 
-					<h5 class="col-lg-8 d">정말 우리를 떠나십니까?</h5>
+					<h5 class="col-lg-8 d">정말 탈퇴하십니까?</h5>
 
 
 				</div>
 			</div>
 		</div>
 
-	<div class="col-lg-8  text-center bcenter"> 
+	<div class="col-lg-8  text-center bcenter dw"> 
 <!-- <input type="submit" value="Login" onclick="location.href='index2.html' " class="btn btn-primary py-3 px-4">
  -->
  
- <a  class="btn btn-primary py-2 px-4" href="control?command=memberDelete">YES</a>
-  <a  class="btn btn-primary py-2 px-4" href="main2.jsp">NO</a>
+ <a  class="btn btn-primary py-2 px-4 dw" href="control?command=memberDelete">YES</a>
+  <a  class="btn btn-primary py-2 px-4 dw" href="main2.jsp">NO</a>
  </div>
  
 <%--  <div class="col-lg-8  text-center bcenter"> 

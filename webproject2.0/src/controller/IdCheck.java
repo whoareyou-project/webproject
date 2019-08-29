@@ -16,7 +16,7 @@ import model.dto.MemberDTO;
 @WebServlet("/check")
 public class IdCheck extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "index2.html";
+        String url = "showError.jsp";
 		String id = request.getParameter("id");
         String pw = request.getParameter("pw");
        

@@ -62,7 +62,6 @@ margin-right:100px;
 
 								<li><a href="attachment2.jsp">Lovetype</a></li>
 
-								<li><a href="about.html">About</a></li>
 								<li class="has-children"><a href="#">Shows</a>
 									<ul class="dropdown arrow-top">
 										<li><a href="attachintroduce.html">Lovetype</a></li>
@@ -190,7 +189,7 @@ margin-right:100px;
 						document.write(new Date().getFullYear());
 					</script>
 					All rights reserved | This template is made with <i
-						class="icon-heart text-danger" aria-hidden="true"></i> by <a
+						  aria-hidden="true"></i> by <a
 						href="https://colorlib.com" target="_blank">Colorlib</a>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>

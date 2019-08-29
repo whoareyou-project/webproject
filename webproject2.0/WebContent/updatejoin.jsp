@@ -53,16 +53,13 @@
 
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
 								<li class="active"><a href="main2.jsp">Home</a></li>
-								<li><a href="dj.html">Value</a></li>
 
 								<li><a href="attachment2.jsp">Lovetype</a></li>
 
-								<li><a href="about.html">About</a></li>
-								<li class="has-children"><a href="shows.html">Shows</a>
+								<li class="has-children"><a href="#">Shows</a>
 									<ul class="dropdown arrow-top">
-										<li><a href="#">Valuetype</a></li>
-										<li><a href="#">Lovetype</a></li>
-										<li><a href="#">Interviews</a></li>
+										<li><a href="attachintroduce.html">Lovetype</a></li>
+										<li><a href="#">Mytype</a></li>
 										<li class="has-children"><a href="#">Member</a>
 											<ul class="dropdown">
 											

@@ -9,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 
-public class modiDTO {
+public class ModiDTO {
 
 
 

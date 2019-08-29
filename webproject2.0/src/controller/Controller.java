@@ -17,7 +17,7 @@ import model.dao.MemberDAO;
 import model.dao.service;
 import model.dto.AttachDTO;
 import model.dto.MemberDTO;
-import model.dto.modiDTO;
+import model.dto.ModiDTO;
 
 @WebServlet("/control")
 public class Controller extends HttpServlet {
@@ -178,7 +178,7 @@ public class Controller extends HttpServlet {
 					return;
 			}
 			boolean result = false;
-			modiDTO member = new modiDTO(id, pw, name, age, birthday, address, job, height);
+			ModiDTO member = new ModiDTO(id, pw, name, age, birthday, address, job, height);
 			
 			try {
 				result = service.updateMember(id, pw, name, age, birthday, address, job, height);

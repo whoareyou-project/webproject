@@ -46,9 +46,13 @@ padding:20px 0px 2px 690px;
 
 <style type="text/css">
 .d { 
-padding:20px 20px 20px 400px; }
+padding:20px 20px 20px 370px; }
 </style>
 
+<style type="text/css">
+.dw { 
+padding:20px 20px 20px 670px; }
+</style>
 
 </head>
 <body>
@@ -127,11 +131,11 @@ padding:20px 20px 20px 400px; }
 			</div>
 		</div>
 
-	<div class="col-lg-8  text-center bcenter"> 
+	<div class="col-lg-8  text-center bcenter dw"> 
 <!-- <input type="submit" value="Login" onclick="location.href='index2.html' " class="btn btn-primary py-3 px-4">
  -->
  
- <a  class="btn btn-primary py-3 px-4" href="index2.html">Login</a>
+ <a  class="btn btn-primary py-3 px-4 dw" href="index2.html">Login</a>
  </div>
  
 <%--  <div class="col-lg-8  text-center bcenter"> 
