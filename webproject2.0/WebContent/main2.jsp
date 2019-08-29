@@ -65,7 +65,6 @@ margin-right:100px;
 								<li class="has-children"><a href="#">Shows</a>
 									<ul class="dropdown arrow-top">
 										<li><a href="attachintroduce.html">Lovetype</a></li>
-										<li><a href="#">Mytype</a></li>
 										<li class="has-children"><a href="#">Member</a>
 											<ul class="dropdown">
 											
